@@ -1,27 +1,16 @@
-# 📱 Perguntas
+# perguntas
 
-Um aplicativo Flutter simples para praticar conceitos iniciais, onde o usuário responde perguntas interativas.
+A new Flutter project.
 
-## 🎯 Objetivo
+## Getting Started
 
-Este projeto foi criado como ponto de partida para estudar Flutter, explorando:
+This project is a starting point for a Flutter application.
 
-- Widgets básicos (`StatelessWidget`, `StatefulWidget`)
-- Gerenciamento simples de estado
-- Interatividade com botões (`ElevatedButton`)
-- Renderização dinâmica de textos
+A few resources to get you started if this is your first Flutter project:
 
-## 🖼️ Demonstração
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-Tela inicial com uma pergunta e múltiplas opções de resposta:
-
-![Perguntas Screenshot](docs/screenshot-perguntas.png)
-
-_(adicione prints do app dentro da pasta `docs/` para organizar melhor)_
-
-## 🚀 Como rodar o projeto
-
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/SEU_USUARIO/perguntas.git
-   ```
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
