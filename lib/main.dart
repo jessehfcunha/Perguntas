@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './resultado.dart';
 import './questionario.dart';
+import 'dados/perguntas.dart';
 
 main() => runApp(PerguntaApp());
 
@@ -8,7 +9,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
   var _perguntaSelecionada = 0;
   var _pontuacaoTotal = 0;
   bool get temPerguntaSelecionada {
-    return _perguntaSelecionada < _perguntas.length;
+    return _perguntaSelecionada < perguntas.length;
   }
 
   _responder(int pontuacao) {
@@ -25,41 +26,8 @@ class _PerguntaAppState extends State<PerguntaApp> {
     _pontuacaoTotal = 0;
   });
 
-  final _perguntas = const [
-    {
-      'texto': 'Qual é a sua cor favorita?',
-      'respostas': [
-        {'texto': 'Preto', 'pontuacao': 5},
-        {'texto': 'Vermelho', 'pontuacao': 3},
-        {'texto': 'Verde', 'pontuacao': 10},
-        {'texto': 'Branco', 'pontuacao': 1},
-      ],
-    },
-    {
-      'texto': 'Qual é o seu animal favorito?',
-      'respostas': [
-        {'texto': 'Coala', 'pontuacao': 5},
-        {'texto': 'Elefante', 'pontuacao': 3},
-        {'texto': 'Gato', 'pontuacao': 10},
-        {'texto': 'Cachorro', 'pontuacao': 1},
-      ],
-    },
-    {
-      'texto': 'Qual é o seu instrutor favorito?',
-      'respostas': [
-        {'texto': 'Saturnino', 'pontuacao': 5},
-        {'texto': 'Josinaldo', 'pontuacao': 3},
-        {'texto': 'Donizildo', 'pontuacao': 10},
-        {'texto': 'Emeterio', 'pontuacao': 1},
-      ],
-    },
-  ];
-
   @override
   Widget build(BuildContext context) {
-    /*for (String textoResposta in respostas) {
-      widgets.add(Resposta(textoResposta, _responder));
-    }*/
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -74,7 +42,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
         ),
         body: temPerguntaSelecionada
             ? Questionario(
-                perguntas: _perguntas,
+                perguntas: perguntas,
                 perguntaSelecionada: _perguntaSelecionada,
                 quandoResponder: _responder,
               )
